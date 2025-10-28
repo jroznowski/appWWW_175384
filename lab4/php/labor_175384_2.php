@@ -33,7 +33,7 @@
         echo $liczba_1.' i '.$liczba_2.' są równe.<br><br>';
 
     echo 'Zastosowanie instrukcji warunkowej switch - zmienna $kraj. <br>';
-    $kraj = 'Niemcy';
+    $kraj = 'Japonia';
     switch ($kraj){
         case 'Niemcy':
             echo 'Niemcy leżą w Europie.<br><br>';
@@ -63,7 +63,7 @@
 
     echo '<br>Zastosowanie $_GET - formularz wyświetlający przesłaną zmienną w adresie URL.<br>';
     echo '<form method="GET">
-        Imie: <input type="text" name="wiek"><br>
+        Wiek: <input type="text" name="wiek"><br>
         <input type="submit">
         </form>';
     if (isset($_GET['wiek'])){
