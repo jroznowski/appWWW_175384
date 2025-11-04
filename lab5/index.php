@@ -17,8 +17,6 @@
     elseif ($idp == 'kultura') $strona = 'html/kultura.html';
     elseif ($idp == 'polecane') $strona = 'html/polecane.html';
     elseif ($idp == 'poligon_js') $strona = 'html/poligon_js.html';
-    ?>
-    <?php
     echo '<link rel="stylesheet" href="css/style.css">';
     if ($_GET['idp'] == 'kultura') {
         echo '<link rel="stylesheet" href="css/kultura.css">';
