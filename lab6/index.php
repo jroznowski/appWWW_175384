@@ -48,11 +48,6 @@
 
 <main class="content">
     <?php
-    /*if(file_exists($strona)){
-        include($strona);
-    } else {
-        echo '<p class="error">Plik podstrony nie istnieje w katalogu /html.</p>';
-    }*/
     include 'showpage.php';
     PokazPodstrone($strona);
       
