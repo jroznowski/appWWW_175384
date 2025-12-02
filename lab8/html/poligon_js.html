@@ -1,0 +1,63 @@
+    <section class="box">
+    <form method="post" name="background">
+        <input type="button" value="żółty" onclick="changeBackground('#FFF000D9')">
+        <input type="button" value="czarny" onclick="changeBackground('#000000D9')">
+        <input type="button" value="biały" onclick="changeBackground('#FFFFFFD9')">
+        <input type="button" value="zielony" onclick="changeBackground('#00FF00D9')">
+        <input type="button" value="niebieski" onclick="changeBackground('#0000FFD9')">
+        <input type="button" value="pomarańczowy" onclick="changeBackground('#FF8000D9')">
+        <input type="button" value="szary" onclick="changeBackground('#c0c0c0D9')">
+        <input type="button" value="czerwony" onclick="changeBackground('#FF0000D9')">
+    </form>
+    <p>Aktualny czas oraz data:</p>
+    <div id="zegarek"></div>
+    <div id="data"></div>
+    <div id="animacjaTestowa1" class="test-block">Kliknij, a się powiększę</div>
+
+    <script>
+        $("#animacjaTestowa1").on("click", function(){
+        $(this).animate({
+            width: "500px",
+            opacity: 0.4,
+            fontsize: "3em",
+            borderWidth: "10px"
+        }, 1500);
+        });
+    </script>
+    <div id="animacjaTestowa2" class="test-block">
+    Najedź kursorem, a się powiększe
+    </div>
+
+    <script>
+    $("#animacjaTestowa2").on({
+        "mouseover" : function() {
+            $(this).animate({
+                width: 300
+            }, 800);
+        },
+        "mouseout" : function() {
+            $(this).animate({
+                width: 200
+            }, 800);
+        }
+    });
+    </script>
+
+    <div id="animacjaTestowa3" class="test-block">
+    Klikaj, abym urósł
+    </div>
+
+    <script>
+    $("#animacjaTestowa3").on("click", function(){
+        if (!$(this).is(":animated")) {
+            $(this).animate({
+                width: "+=" + 50,
+                height: "+=" + 10,
+                opacity: "-=" + 0.1,
+                duration : 3000
+            });
+        }
+    });
+    </script>
+    </section>
+
