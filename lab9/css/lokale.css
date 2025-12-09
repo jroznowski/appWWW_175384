@@ -1,0 +1,11 @@
+/* Wyświetlanie obrazków i zmiana odstępu dla akapitów h3 dla strony polecanych lokali */
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+h3 {
+  padding-bottom: 2vh;
+}
