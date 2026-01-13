@@ -1,0 +1,174 @@
+/* Resetowanie marginesów, paddingów i ustawienie box-sizing dla wszystkich elementów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stylizacja głównego body strony */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; /* Czcionka bazowa */
+  background-color: burlywood; /* Kolor tła strony */
+  display: flex; /* Użycie flexboxa dla układu */
+  flex-direction: column; /* Ustawienie elementów w kolumnie */
+  min-height: 100vh; /* Strona zajmuje pełną wysokość okna */
+}
+
+/* Główna sekcja strony */
+main {
+  flex: 1; /* Rozciąga się na całą dostępną przestrzeń */
+  padding: 20px; /* Odstęp wewnętrzny */
+}
+
+/* Sekcja content wewnątrz main */
+main.content {
+  flex: 1;
+  display: flex; /* Układ flexbox dla zawartości */
+  gap: 20px; /* Odstęp między elementami */
+  padding: 20px;
+  background-image: url("../img/tlo.jpg"); /* Tło graficzne */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Tło pozostaje nieruchome przy scrollowaniu */
+}
+
+/* Nagłówek i stopka strony */
+header,
+footer {
+  text-align: center; /* Wyśrodkowanie tekstu */
+  padding: 15px;
+}
+
+/* Stylizacja obrazów */
+img {
+  max-width: 100%; /* Obraz nie wyjdzie poza kontener */
+  height: auto; /* Zachowanie proporcji */
+  border-radius: 8px; /* Zaokrąglenie rogów */
+}
+
+/* Stylizacja akapitów */
+p {
+  font-size: 16px;
+}
+
+/* Stylizacja elementu iframe (np. wideo) */
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9; /* Proporcje obrazu wideo */
+}
+
+/* Klasa dla komunikatów błędów */
+.error {
+  color: white;
+  font-weight: bold;
+}
+
+/* Pasek nawigacyjny */
+.navbar {
+  list-style-type: none; /* Usunięcie punktorów */
+  background-color: #333333;
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie elementów */
+  flex-wrap: wrap; /* Zawijanie elementów w mniejszych ekranach */
+}
+
+/* Linki w pasku nawigacyjnym */
+.navbar li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none; /* Usunięcie podkreślenia */
+}
+
+/* Efekt hover dla linków w navbarze */
+.navbar li a:hover:not(.active) {
+  background-color: rgb(151, 121, 85);
+}
+
+/* Styl dla aktywnego linku */
+.navbar li a.active {
+  background-color: brown;
+}
+
+/* Stylizacja boxów (kontenerów treści) */
+.box {
+  flex: 1;
+  margin: 0;
+  background: white;
+  padding: 3vh;
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.85); /* Półprzezroczyste tło */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+}
+
+/* Akapity wewnątrz boxów */
+.box p {
+  margin-bottom: 3vh;
+}
+
+/* Listy wewnątrz boxów */
+.box ul {
+  list-style-position: inside;
+  margin-bottom: 3vh;
+}
+
+.box ol {
+  list-style-position: inside;
+  margin-bottom: 3vh;
+}
+
+/* Efekt podświetlania dla boxów */
+.box:hover {
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Blok testowy wykorzystywany do obsługi poligonu JS */
+.test-block {
+  width: 200px;
+  border: 1px solid rgb(0, 0, 0);
+  background: burlywood;
+  text-align: center;
+  color: #000;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 3vh;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Wyłączenie zaznaczania tekstu na różnych przeglądarkach */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Stylizacja elementu z ID data */
+#data {
+  margin-bottom: 3vh;
+}
+
+/* Media dla większych ekranów */
+@media (min-width: 700px) {
+  .box {
+    margin: 0 10px;
+  }
+}
+
+/* Media dla mniejszych ekranów dla zwiększonej responsywności strony */
+@media (max-width: 768px) {
+  main.content {
+    flex-direction: column; /* Układ pionowy */
+    align-items: stretch;
+  }
+
+  .box {
+    flex: none;
+    width: 100%;
+    margin: 10px 0;
+  }
+}

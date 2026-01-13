@@ -1,0 +1,105 @@
+/* Sekcja kontaktowa
+   Główny kontener formularza kontaktowego, ograniczony do 600px szerokości.
+   Wewnątrz znajdują się nagłówki, tabela z polami formularza oraz przyciski.
+*/
+.kontakt {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.kontakt h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.kontakt table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.kontakt td {
+  padding: 10px;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+/* Pola formularza (tekst, email, textarea) – pełna szerokość, zaokrąglone rogi*/
+.kontakt input[type="text"],
+.kontakt input[type="email"],
+.kontakt textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+/* Efekt focus zmienia kolor obramowania na brązowy dla lepszej czytelności */
+.kontakt input[type="text"]:focus,
+.kontakt input[type="email"]:focus,
+.kontakt textarea:focus {
+  border-color: brown;
+  outline: none;
+}
+
+.kontakt input[type="submit"] {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.kontakt input[type="submit"]:hover {
+  background-color: rgb(151, 121, 85);
+}
+
+.kontakt .error {
+  background-color: rgba(139, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.kontakt a {
+  display: inline-block;
+  margin-top: 15px;
+  color: brown;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.kontakt a:hover {
+  text-decoration: underline;
+}
+
+/* Responsywność
+   Dla ekranów poniżej 768px tabela i komórki zamieniają się w bloki,
+   co pozwala formularzowi lepiej dopasować się do wąskich ekranów (np. telefonów).
+*/
+@media (max-width: 768px) {
+  .kontakt {
+    padding: 10px;
+  }
+
+  .kontakt table,
+  .kontakt td {
+    display: block;
+    width: 100%;
+  }
+
+  .kontakt td {
+    padding: 8px 0;
+  }
+}
